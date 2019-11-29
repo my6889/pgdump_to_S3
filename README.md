@@ -67,5 +67,5 @@ pgdump2s3 exited with code 0
 
 在S3控制台上已经可以看到备份文件了
 
-![](https://wood-bucket.oss-cn-beijing.aliyuncs.com/hexo/pgdumps39185404.png)
+![123](https://wood-bucket.oss-cn-beijing.aliyuncs.com/hexo/pgdumps39185404.png)
 
