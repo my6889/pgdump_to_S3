@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  pgdump:
+    image: registry.cn-shenzhen.aliyuncs.com/sswlib/pgdump_to_s3:v12.1
+    build: .
+    container_name: pgdump2s3
+    volumes:
+      - 'pgdump-pv:/pgdump'
+    env_file:
+      - pgdump.env
+volumes:
+  pgdump-pv:
+    driver: local

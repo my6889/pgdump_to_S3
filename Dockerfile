@@ -1,9 +1,11 @@
-FROM postgres:9.6-alpine
+FROM postgres:12.1-alpine
 
-RUN apk update && apk add py-pip
-RUN pip install awscli --upgrade \
-&& mkdir /pgdump \
-&& chmod -R 777 /pgdump
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
+    apk update && \
+    apk add py-pip && \
+    pip install awscli --upgrade -i https://pypi.douban.com/simple/  && \
+    mkdir /pgdump && \
+    chmod -R 777 /pgdump
 
 ENV PGDUMP_OPTIONS -Fc --no-acl --no-owner
 ENV PGDUMP_DATABASE **None**
