@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   pgdump:
-    image: registry.cn-shenzhen.aliyuncs.com/sswlib/pgdump_to_s3:v12.1
+    image: registry.cn-shenzhen.aliyuncs.com/swpb/pg2s3:v12.1 
     build: .
     container_name: pgdump2s3
     volumes:
